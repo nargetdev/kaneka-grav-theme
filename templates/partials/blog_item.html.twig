@@ -40,6 +40,20 @@
         {% endif %}
 
     </div>
+    <div>
+    <p> HELOOOO??</p>
+            {% if page.header.images|length > 0 %}
+        {% for image in page.header.images %}
+        <article class="thumb">
+            <a href="{{ page.media[image.name].url }}" class="image">
+                <img src="{{ page.media[image.name].url }}" title="{{ image.title|escape }}" />
+            </a>
+            <h2>{{ image.title }}</h2>
+            <p>{{ image.description }}</p>
+        </article>
+        {% endfor %}
+        {% endif %}
+    </div>
 
     <div class="list-blog-padding">
 
